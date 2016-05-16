@@ -8,7 +8,7 @@ Motivation: The idea for Jarvis came from the popular comic book, now movie, ser
   - familiarity with OOP concepts(encapsulation, inheritance/polymorphism, abstraction)
   - design creativity(I was not able to implement everything I wanted to in the way that I had initially planned)
 
-<b>Third-party APIs/libraries</b>
+Third-party APIs/libraries
 Outside of Java's standard libraries, in this project I make use of:
  - Sphinx4, created by Carnegie Mellon University
  - FreeTTS, created by Sun Microsystems Laboratories
