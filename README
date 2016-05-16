@@ -1,6 +1,6 @@
 Jarvis is a simple voice command application written by Airen Surzyn as part of an application process.
 
-Overview: Jarvis was conceived as a simple desktop client that could take voice commands as input and output responsive actions from the user's machine. The application moves between states which accept certain types of input and uses each state to form a coherent command which is translated into a Unix(no Windows implementation at the moment) command and run from terminal. The command itself as it is being constrcted is displayed on the GUI and a voice response is given to prompt the user towards further input.
+Overview: Jarvis was conceived as a simple desktop client that translates simple voice commands into executable command line operations. The application moves between states which accept certain types of input and uses each state to form a coherent command which is translated into a Unix(no Windows implementation at the moment) command and run from terminal. The command itself as it is being constrcted is displayed on the GUI and a voice response is given to prompt the user towards further input.
 
 Motivation: The idea for Jarvis came from the popular comic book, now movie, series 'Iron Man' which I recently saw for the first time. This application was written as a submission/sample code project as I believed it would demonstrate key development skills for a young programmer in my position, namely:
   - basic programming acumen
