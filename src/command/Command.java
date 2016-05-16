@@ -4,18 +4,6 @@ import java.io.IOException;
 
 public class Command {
 	
-	private String commandAction;
-	private String commandObject;
-	
-	public Command(){
-		
-	}
-	
-	public Command(String action, String object) {
-		this.commandAction = commandAction;
-		this.commandObject = commandObject;
-	}
-	
 	public String getCommandAction() {return null;}
 	
 	public String getCommandObject(){return null;}

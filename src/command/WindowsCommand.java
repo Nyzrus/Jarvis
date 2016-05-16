@@ -13,9 +13,9 @@ public class WindowsCommand extends Command{
 	private static Map<String, String> commandMap;
 	
     static {
-        Map<String, String> initMap = new HashMap<String, String>();
+        //Map<String, String> initMap = new HashMap<String, String>();
         //not implemented
-        commandMap = Collections.unmodifiableMap(initMap);
+        //commandMap = Collections.unmodifiableMap(initMap);
     }
 	
 	@Override
