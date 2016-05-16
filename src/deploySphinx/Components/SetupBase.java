@@ -62,12 +62,18 @@ public class SetupBase {
 		  });
 	}
 	
-	public void updateInfoLabel(final String update){
+	private void updateInfoLabel(final String update){
 		SwingUtilities.invokeLater(new Runnable() {
 		    public void run() {
 		    	info.setText(update);
 		    }
 		  });	
+	}
+	
+	public void startSphinx(String configFile){
+		Runnable sphinx = new Sphinx(configFile);
+		Thread sphinxThread = new Thread(sphinx);
+		sphinxThread.start();
 	}
 	
 	
@@ -157,6 +163,9 @@ public class SetupBase {
 										RunCommand.executeCommand(new UnixCommand(commandAction, commandObject));
 									}else if(System.getProperty("os.name").equalsIgnoreCase("Windows XP")){
 										//RunCommand.executeCommand(new WindowsCommand(commandAction, commandObject));
+									}else{
+										//I have yet to gather all the environment "keys" that might map to unix/linux commands, so I put this as the default for now as it is the only set I've implemented
+										RunCommand.executeCommand(new UnixCommand(commandAction, commandObject));
 									}
 								}catch(IOException ex){
 									jv.jarvisSpeak(-1);
@@ -185,12 +194,6 @@ public class SetupBase {
 			
 		}
 					
-	}
-	
-	public void startSphinx(String configFile){
-		Runnable sphinx = new Sphinx(configFile);
-		Thread sphinxThread = new Thread(sphinx);
-		sphinxThread.start();
 	}
 	
 	private class JarvisVoice {
