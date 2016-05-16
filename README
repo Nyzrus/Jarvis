@@ -17,8 +17,13 @@ User issues command -> Command is interpreted/vaildated -> Command is executed
 
 How to use Jarvis:
 
-Jarvis works in states that change after every rawInput that is given. Saying any of the words in the recognizable list will send jarvis to the next state(apart from 'cancel' in states 1,2,3 which send Jarvis back to state 0).
+The program goes between four states based on user input(raw audio) drawn roughly below:
 
+
+State 0: Attention -> State 1: Action -> State 2: Object -> State 3: Confirmation
+
+
+Each state corresponds to a limited “grammar” of potential words that move Jarvis into the next state or back to state 0 in the case of a “cancel” command or the completion of State 3. The design is very much like a Finite State Machine underpinned by the logical transitions indicated by user commands. Currently, Jarvis has been developed for use with Unix/Linux systems, but the Command classes are designed such that they are easily extendable to a Windows implementation.
 State 0 - Attention:
 - Recognizable words include [Jarvis, hey Jarvis, please]
 
