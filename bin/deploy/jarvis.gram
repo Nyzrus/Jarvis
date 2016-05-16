@@ -1,0 +1,15 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Hello World example
+ */
+
+grammar jarvis;
+
+public <basicCmd> = <startPolite>;
+<command> = <action> <program>;
+<action> = /7/ open | /2/ close | /1/delete | /1/move;
+<program> = (internet | command);
+<startPolite> = (please | hey jarvis | jarvis);
+<endPolite> = [please | thank you];
+
