@@ -28,5 +28,7 @@ State 1 - Action:
 State 2 - Object:
 - Recognizable words include [internet, command, eclipse, cancel]
 
-State 3 - Confirm:
+State 3 - Confirmation:
 - Recognizable words include [execute, cancel]
+
+**Note - all words are contained in the corresponding .gram files
