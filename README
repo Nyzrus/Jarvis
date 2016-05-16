@@ -1,0 +1,32 @@
+Jarvis is a simple voice command application written by Airen Surzyn as part of an application process.
+
+Overview: Jarvis was conceived as a simple desktop client that could take voice commands as input and output responsive actions from the user's machine. The application moves between states which accept certain types of input and uses each state to form a coherent command which is translated into a Unix(no Windows implementation at the moment) command and run from terminal.
+
+Motivation: The idea for Jarvis came from the popular comic book, now movie, series 'Iron Man' which I recently saw for the first time. This application was written as a submission/sample code project as I believed it would demonstrate key development skills for a young programmer in my position, namely:
+  - basic programming acumen
+  - the ability to find/decipher/implement unfamiliar third-party API's
+  - familiarity with OOP concepts(encapsulation, inheritance/polymorphism, abstraction)
+  - creativity(I was not able to implement everything I wanted to in the way that I had initially planned)
+
+Third-party APIs/libraries
+Outside of Java's standard libraries, in this project I make use of:
+ - Sphinx4, created by Carnegie Mellon University
+ - FreeTTS, created by Sun Microsystems Laboratories
+
+User issues command -> Command is interpreted/vaildated -> Command is executed
+
+How to use Jarvis:
+
+Jarvis works in states that change after every rawInput that is given. Saying any of the words in the recognizable list will send jarvis to the next state(apart from 'cancel' in states 1,2,3 which send Jarvis back to state 0).
+
+State 0 - Attention:
+- Recognizable words include [Jarvis, hey Jarvis, please]
+
+State 1 - Action:
+- Recognizable words include [open, close, cancel]
+
+State 2 - Object:
+- Recognizable words include [internet, command, eclipse, cancel]
+
+State 3 - Confirm:
+- Recognizable words include [execute, cancel]
