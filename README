@@ -37,3 +37,19 @@ State 3 - Confirmation:
 - Recognizable words include [execute, cancel]
 
 **Note - all words are contained in the corresponding .gram files
+
+
+
+Improvements
+
+By no means a polished product, there are a number of improvements I would like to make.
+
+1. Improve command construction
+- After sitting on this for a day or so, I think I can make the command construction procedure more flexible by using a SymbolTable, or effectively a String based directed graph
+- E.g each node in the graph represents a word in the vocabulary, and maintains pointers to words in can link to for command formation. When a word is read in that does not match a connection of a node, Jarvis can return an exception or handle the error
+- Can maybe use a String[] to keep track of all the tokens
+- (Jarvis) -> (open) -> (internet)
+
+2. Improve negative funcitonality
+- Currently the negative functionality(when bad words are submitted) is pretty poor
+- The way I understand Sphinx to work, rawInput is interpreted and confidence levels are assigned to potential words from the grammar file. The way I was thinking to improve this would be to not accept input below a certain confidence level. Unfortunately I haven't been able to find such a variable/method I can access yet. Could be found potentially by digging further into Documentation
